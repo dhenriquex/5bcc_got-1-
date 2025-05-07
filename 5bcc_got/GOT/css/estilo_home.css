@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+
+:root {
+  --font1: "Cormorant Garamond", serif;
+  --font2: "Verdana", sans-serif;
+  --fontSize: 16px;
+}
+
+html,
+body {
+  font-family: var(--font1);
+  font-size: var(--fontSize);
+  margin: 0px;
+  padding: 0px;
+  width: 100dvw;
+}
+
+header#cabecalho img#personagens {
+  width: 100dvw;
+  position: relative;
+  height: 95dvh;
+}
+
+header#cabecalho nav#menu {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100dvw;
+  height: 16dvh;
+}
+
+header#cabecalho nav#menu ol {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 16dvh;
+  margin: 0px;
+  gap: 20px;
+}
+
+header#cabecalho nav#menu ol li#logo {
+  margin-right: auto;
+}
+
+header#cabecalho nav#menu ol li#logo a img {
+  width: 150px;
+  filter: invert(1);
+}
+
+header#cabecalho nav#menu ol li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header#cabecalho nav#menu ol li a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+header#cabecalho nav#menu > ol > li:not(#logo) > a:hover {
+  border-bottom: 3px solid white;
+}
+
+header#cabecalho nav#menu ol li ol.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.95);
+  left: 0;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+header#cabecalho nav#menu ol li:hover ol.submenu {
+  display: block;
+  width: 100%;
+}
+.submenu li {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.submenu li:hover {
+  background-color: #444444;
+  & a{
+    color: red !important;
+  }
+}
+
+.submenu:nth-last-child {
+  border: none;
+}
